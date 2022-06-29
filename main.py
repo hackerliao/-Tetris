@@ -1,7 +1,8 @@
-print('           喌铿   工作室      ')
+# made by hacker_liao from Ever Victory Studio(branch in MrSir6000)
 import pygame,sys,random,time
 block_initial_position,score,times,gameover,press,all_block,background=[20,5],[0],0,[],False,[[[0,0],[0,-1],[0,1],[0,2]],[[0,0],[0,1],[-1,1],[-1,0]],[[0,0],[0,-1],[-1,0],[-1,1]],[[0,0],[0,1],[-1,-1],[-1,0]],[[0,0],[0,1],[1,0],[0,-1]],[[0,0],[1,0],[-1,0],[1,-1]],[[0,0],[1,0],[-1,0],[1,1]]],[[0 for column in range(0,10)]for row in range(0,22)]
 background[0],select_block=[1 for column in range(0,10)],list(random.choice(all_block))
+pygame.display.set_caption('Ever Victory - MrSir6000')
 def move(n):
     if n==100:
         for row,column in select_block:
@@ -37,7 +38,7 @@ def move(n):
             background.pop(row)
             background.append([0 for column in range(0,10)])
         score[0]+=len(complete_row)
-        pygame.display.set_caption('Tetris,Score:'+str(score[0])+' Robin5')
+        pygame.display.set_caption('Tetris,Score:'+str(score[0])+' Ever Victory - MrSir6000')
         select_block.clear(),select_block.extend(list(random.choice(all_block)))
         block_initial_position.clear(),block_initial_position.extend([20,4])
         for row,column in select_block:
@@ -60,7 +61,8 @@ while True:
     else:times+=1
     if gameover:sys.exit()
     move(100)
-    pygame.time.Clock().tick(200)   #tick(200)修改数字可以修改游戏的整体速率
+    pygame.time.Clock().tick(100)
     pygame.display.flip()
  
-#记分系统在窗口标题上
+#MrSir6000's official website: mrsir6000.sxl.cn, search MrSir6000 on youtube and you will discover fun!
+# made by hacker_liao from Ever Victory Studio(branch in MrSir6000)
